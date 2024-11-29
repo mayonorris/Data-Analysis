@@ -6,8 +6,9 @@ shinyUI(
                
           ),
      sidebarLayout(
-          sidebarPanel("Here is the sidebar panel"),
-          mainPanel("This is the main Panel text, output is displayed here")
+          sidebarPanel(h3("Here is the sidebar panel"), h4("Okay")),
+          mainPanel(h5("This is the main Panel text, output is displayed here")),
+          position = "right"
      )
      )
 )
