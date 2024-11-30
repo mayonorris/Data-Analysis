@@ -1,14 +1,15 @@
 library(shiny)
 
-shinyUI(
-     fluidPage(
-          titlePanel(title =  "Hello Shiny!!!"
-               
-          ),
+shinyUI(fluidPage(
+     titlePanel("text input in shiny ==>"),
      sidebarLayout(
-          sidebarPanel(h3("Here is the sidebar panel"), h4("Okay")),
-          mainPanel(h5("This is the main Panel text, output is displayed here")),
-          position = "right"
+          sidebarPanel(h3("enter personal info"),
+                       textInput("name", "Enter your name", value = "Doe"),
+                       textInput("age", "Enter your age", value = NA)),
+          mainPanel(h2("Personal information:"),
+                    textOutput("name"),
+                    textOutput("age")
+                    )
      )
-     )
+)
 )
