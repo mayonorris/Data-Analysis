@@ -15,5 +15,5 @@ shinyUI(fluidPage(
                h4(textOutput("observation")),
                tableOutput("view")
                    ))
-)
+    )
 )

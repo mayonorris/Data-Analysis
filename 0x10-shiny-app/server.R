@@ -1,3 +1,4 @@
+
 library(shiny)
 library(datasets )
 shinyServer(function(input, output){
@@ -11,4 +12,5 @@ shinyServer(function(input, output){
      output$view <- renderTable(
           dplyr::sample_frac(get(input$dataset), size = input$frac)
      )
-})
+}
+)
